@@ -28,7 +28,6 @@ else:
     assert os.path.exists(VFILE), 'version.py does not exist, please set PISTON_VERSION (or run make_version.py for dev purposes)'
     from openstackx import __pistonversion__ as pistonversion
     PISTON_VERSION = pistonversion.VERSION
-    assert '9999.0' not in PISTON_VERSION, 'Please build this from a source tarball'
 
 dst = 'debian/openstackx/var/lib/nova/'
 os.system('rm -rf %s' % dst)
